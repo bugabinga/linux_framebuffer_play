@@ -11,7 +11,7 @@ build () {
 	flags="$flags -pedantic-errors" # treat "minor" issues as errors. let us be strict while learning C. 
 	flags="$flags -Wextra" # show more warnings than usual ?
 	flags="$flags -Werror" # turn warnings into errors. scared while learning C. TODO(oliver): Are those other Warning flags redundant now?
-	flags="$flags -ansi" # as long as I do not know about the differences in the various C standards, I will stick to the (presumably) most portable.
+	flags="$flags -std=c89" # as long as I do not know about the differences in the various C standards, I will stick to the (presumably) most portable.
 
 	gcc $flags "$source_code/main.c" -o "$build_output/main"
 }
